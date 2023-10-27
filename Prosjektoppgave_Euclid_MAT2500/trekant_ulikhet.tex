@@ -1,0 +1,23 @@
+% \documentclass[12pt,
+%                a4paper,
+%                article,
+%                oneside,
+%                oldfontcommands,
+%                norsk]{memoir}
+% \usepackage{tikz}
+% \usepackage{tkz-euclide}
+% \usetikzlibrary{calc,patterns,angles,quotes}
+% \begin{document}
+\begin{tikzpicture}[label distance=5mm]
+    \tkzDefPoint(0,0){B}
+    \tkzLabelPoint[black,anchor=east](B){$B$} 
+    \tkzDefPoint(1.5,2){A}
+    \tkzLabelPoint[black,anchor=east](A){$A$};
+    \tkzDefPoint(6,0){C}
+    \tkzLabelPoint[black,anchor=west](C){$C$};
+    \tkzDefPoint(3.75,5){D}
+    \tkzLabelPoint[black,anchor=south](D){$D$};
+    \filldraw[color=red!60, fill=red!5](A) -- (D) -- (C) -- cycle;
+    \filldraw[color=blue!60, fill=blue!5](A) -- (B) -- (C) -- cycle;
+\end{tikzpicture}
+% \end{document}

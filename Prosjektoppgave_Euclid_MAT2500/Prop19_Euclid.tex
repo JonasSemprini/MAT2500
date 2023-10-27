@@ -1,0 +1,24 @@
+% \documentclass[12pt,
+%                a4paper,
+%                article,
+%                oneside,
+%                oldfontcommands,
+%                norsk]{memoir}
+% \usepackage{tikz}
+% \usepackage{tkz-euclide}
+% \usetikzlibrary{calc,patterns,angles,quotes}
+% \begin{document}
+\begin{tikzpicture}[label distance=5mm]
+    \tkzDefPoint(0,0){C}
+    \tkzLabelPoint[black,anchor=north](C){$C$} 
+    \tkzDefPoint(4,3){A}
+    \tkzLabelPoint[black,anchor=west](A){$A$};
+    \tkzDefPoint(1,3){B}
+    \tkzLabelPoint[black,anchor=east](B){$B$};
+    \draw (A) -- (B) -- (C) -- cycle;
+    \tkzMarkAngle[red, size=0.5,mark=None](C,B,A)
+    \tkzMarkAngle[blue, size=0.5,mark=None](A,C,B)
+    \tkzLabelAngle[pos = .8](C,B,A){$\alpha$}
+    \tkzLabelAngle[pos = .9](A,C,B){$\beta$}
+\end{tikzpicture}
+% \end{document}

@@ -1,0 +1,20 @@
+% \documentclass[12pt,
+%                a4paper,
+%                article,
+%                oneside,
+%                oldfontcommands,
+%                norsk]{memoir}
+% \usepackage{tikz}
+% \usepackage{tkz-euclide}
+% \usetikzlibrary{calc,patterns,angles,quotes}
+% \begin{document}
+\begin{tikzpicture}[label distance=5mm]
+    \tkzDefPoint(0,0){C}
+    \tkzLabelPoint[black,anchor=east](C){$C$} 
+    \tkzDefPoint(4,0){A}
+    \tkzLabelPoint[black,anchor=west](A){$A$};
+    \tkzDefPoint(1,3){B}
+    \tkzLabelPoint[black,anchor=south](B){$B$};
+    \draw (A) -- (B) node[midway, right] {$c$} -- (C) node[midway, left] {$a$} -- cycle node[midway, below] {$b$};
+\end{tikzpicture}
+%\end{document}

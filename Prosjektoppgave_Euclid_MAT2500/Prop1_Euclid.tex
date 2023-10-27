@@ -1,0 +1,18 @@
+ \begin{tikzpicture}[label distance=5mm]
+        \tkzDefPoint(0,0){A}
+        \tkzLabelPoint[black,anchor=east](A){$A$} 
+        \tkzDefPoint(4,0){B}
+        \tkzLabelPoint[black,anchor=west](B){$B$}
+        \tkzDefPoint(8,0){E}
+        \tkzLabelPoint[black,anchor=west](E){$E$} 
+        \tkzDefPoint(-4,0){D}
+        \tkzLabelPoint[black,anchor=east](D){$D$}
+         \draw[name path=circle1, line width=0.2mm, black] (0,0) circle (4cm);
+         \draw[name path=circle2, line width=0.2mm, black] (4,0) circle (4cm);
+         \tkzInterCC[R](A,4cm)(B,4 cm) \tkzGetPoints{M1}{N1}
+         \tkzLabelPoint[black,anchor=south](M1){$C$}
+         \tkzDrawPoints(M1)
+         \tkzDrawPoints(A)
+         \tkzDrawPoints(B)
+         \draw[line width=0.5mm, red](A) -- (M1) -- (B) -- cycle;
+ \end{tikzpicture}
